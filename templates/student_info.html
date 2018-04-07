@@ -5,7 +5,12 @@
 </head>
 <body>
   <h1>{{ first }} {{ last }}</h1>
-
   <p>GitHub Account: {{ github }}</p>
+    {% for project, grade in title_grade_list %}
+        <ul>
+            <li>Project: {{ project }}, Grade: {{ grade }}</li>
+            <a href="/project?project={{ project }}">{{ project }}</a>
+        </ul>
+    {% endfor %}
 </body>
 </html>
